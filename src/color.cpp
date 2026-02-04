@@ -1,6 +1,13 @@
 #include <color.hpp>
 #include <stdexcept>
-Color Color::convert(Color c) {
-    // if (c.r )
-    throw std::runtime_error("Invalid color");
+void Color::convert() {
+    if (*this == color::Red) {
+        *this = color::BallRed;
+        return;
+    }
+    if (*this == color::BallRed) {
+        *this = color::Red;
+        return;
+    }
+    // throw std::runtime_error("Invalid color");
 }
